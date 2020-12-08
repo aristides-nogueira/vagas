@@ -22,7 +22,7 @@ const Result = ({
 
   const lowerCaseName = name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   const splitName = lowerCaseName.split(' ');
-  const relevantNames = splitName.filter((n) => ![ 'da', 'do', 'das', 'dos', '' ].includes(n));
+  const relevantNames = splitName.filter((n) => ![ 'de', 'da', 'do', 'das', 'dos', 'e', '' ].includes(n));
   const formattedName = relevantNames.map((n, i) => {
     if (i === 0 || i === relevantNames.length - 1) {
       return n;
@@ -66,7 +66,8 @@ const Result = ({
               name,
               date: datePart,
               studentEmail,
-              success: true
+              success: true,
+              timestamp: new Date()
             });
           }}
           startIcon={<ThumbUpIcon />}

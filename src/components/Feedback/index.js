@@ -98,7 +98,8 @@ const FailedFeedback = ({ classes, name, date, studentEmail }) => {
               studentEmail,
               contactEmail,
               contactPhone,
-              success: false
+              success: false,
+              timestamp: new Date()
             });
             setComplete(true);
           }}

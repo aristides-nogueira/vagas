@@ -16,6 +16,7 @@ const FetchData = ({
 }) => {
   useEffect(() => {
     console.log(dateFns.format(birthDate, 'dd/MM/yyyy'));
+    console.log(name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/ /g, ''));
     Promise.all([
       setTimeout(() => { setActiveStep(activeStep + 1) }, 3000),
       db.collection('students2021')
@@ -28,7 +29,11 @@ const FetchData = ({
           }
           snapshot.forEach(doc => {
             console.log(doc.data())
-            setResult('success');
+            if(doc.data().enrolled) {
+              setResult('enroll');
+            } else {
+              setResult('success');
+            }
             setSchoolData({
               name: doc.data().schoolName,
               phones: doc.data().phones,

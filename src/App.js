@@ -19,8 +19,8 @@ function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+      <Link color="inherit" href="https://www.facebook.com/emeianogueira//">
+        EMEI Aristides Nogueira
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const steps = ['Identificação', 'Validação dos dados', 'Resultado'];
+const steps = ['Identificação', 'Validando dados', 'Resultado'];
 
 function getStepContent({
   step,
@@ -126,7 +126,7 @@ export default function Vagas() {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
   const [ name, setName ] = useState('');
-  const [ birthDate, setBirthDate ] = useState(new Date('2000-10-11'));
+  const [ birthDate, setBirthDate ] = useState(new Date('2014-01-02'));
   const [ schoolData, setSchoolData ] = useState({});
   const [ result, setResult ] = useState('');
 
@@ -163,11 +163,10 @@ export default function Vagas() {
             {activeStep === steps.length ? (
               <React.Fragment>
                 <Typography variant="h5" gutterBottom>
-                  Thank you for your order.
+                  Obrigado!
                 </Typography>
                 <Typography variant="subtitle1">
-                  Your order number is #2001539. We have emailed your order confirmation, and will
-                  send you an update when your order has shipped.
+                  Você já pode fechar esta janela.
                 </Typography>
               </React.Fragment>
             ) : (

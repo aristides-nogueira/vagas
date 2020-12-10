@@ -23,7 +23,7 @@ const Result = ({
             <ul>
               <li>a matrícula</li>
               <li>documentação de matrícula</li>
-              <li>solicitação de transferência</li>
+              <li>se há possibilidade de transferência</li>
               <li>ou outras informações sobre a nova unidade escolar</li>
             </ul>
             Entre em contato com eles através do(s) telefone(s):
